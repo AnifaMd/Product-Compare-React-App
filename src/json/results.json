@@ -1,0 +1,50 @@
+{
+    "ParametricList_Attributes": [
+        {
+            "dataField": "PartNumber",
+            "text": "Part Number"
+        }, {
+            "dataField": "ProductName",
+            "text": "Product Name"
+        }, {
+            "dataField": "productline",
+            "text": "Product Line"
+        }, {
+            "dataField": "AV_47_Frequency_GHz",
+            "text": "Frequency (GHz)"
+        }, {
+            "dataField": "AV_47_NF",
+            "text": "NF (dB)"
+        }
+    ],
+    "Products": [
+        {
+        "PartNumber": "ALM-GN001",
+        "ProductName": "GNSS Filter-LNA Front-End Module",
+        "productline": "GPS/GNSS Wireless Amplifiers",
+        "AV_47_Frequency_GHz": "1.575",
+        "AV_47_NF": ""
+        },
+        {
+        "PartNumber": "ALM-GP001",
+        "ProductName": "GPS Filter-LNA-Filter Front-End Module",
+        "productline": "GPS/GNSS Wireless Amplifiers",
+        "AV_47_Frequency_GHz":"1.565 - 1.606",
+        "AV_47_NF": ""
+        },
+        { 
+        "PartNumber": "ALM-GA001",
+        "ProductName": "High-Gain, Low-Current LNA with Variable Current and Shutdown Function",
+        "productline": "GPS/GNSS Wireless Amplifiers",
+        "AV_47_Frequency_GHz": "1.606",
+        "AV_47_NF": "0.97"
+        },
+        {
+        "PartNumber": "ALM-GN002",
+        "ProductName": "GNSS LNA-Filter Front-End Module with Optional Differential Outputs",
+        "productline": "GPS/GNSS Wireless Amplifiers",
+        "AV_47_Frequency_GHz": "1.565",
+        "AV_47_NF": "0.97"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="35" viewBox="0 0 46 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0092b2;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="data_center">
+    <path id="data_center-2" data-name="data_center" class="cls-1" d="M31.036,2.643V32.357l9.07-2.594V5.558l-9.07-2.915M13.971,6.295L9.9,7.233V28.246l4.073,0.843V6.295M8.3,7.6l-3.408.785V27.21L8.3,27.916V7.6M22.7,30.9l6.737,1.394V2.732L22.7,4.284V30.9Zm-1.6-26.245L15.568,5.927V29.42l5.538,1.146V4.651"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+/* CSS Document */
+
+.subnav li{ width:87px;}
+a.popover-diagram span{ background:#fff; opacity:0}
+.collapsable{ width:100%; float:left; padding:10px 0; display:block}
+.collapsable:hover{ text-decoration:none}
+
+.news-and-events-block ul li{margin-bottom:20px !important; float:left}
+
+.howtobuy-distributor .custom-dropdown-menu .dropdown-menu{width:110%;}
+.emulex select::-ms-expand {
+    display: none;
+}

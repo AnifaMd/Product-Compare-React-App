@@ -1,0 +1,301 @@
+@font-face {
+	font-family: 'brcm';
+	src:url('../fonts/brcm.eot?-2s5h5z');
+	src:url('../fonts/brcm.eot?#iefix-2s5h5z') format('embedded-opentype'),
+		url('../fonts/brcm.woff?-2s5h5z') format('woff'),
+		url('../fonts/brcm.ttf?-2s5h5z') format('truetype'),
+		url('../fonts/brcm.svg?-2s5h5z#brcm') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="brcmicon-"], [class*=" brcmicon-"] {
+	font-family: 'brcm';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.brcmicon-slider_arrow_l:before {
+	content: "\e643";
+}
+
+.brcmicon-slider_arrow_r:before {
+	content: "\e644";
+}
+
+.brcmicon-aboutus:before {
+	content: "\e600";
+}
+
+.brcmicon-auto_adas:before {
+	content: "\e601";
+}
+
+.brcmicon-auto_antenna:before {
+	content: "\e602";
+}
+
+.brcmicon-auto_infotainment:before {
+	content: "\e603";
+}
+
+.brcmicon-auto_telematics:before {
+	content: "\e604";
+}
+
+.brcmicon-automotivesystems:before {
+	content: "\e605";
+}
+
+.brcmicon-back_to_top:before {
+	content: "\e606";
+}
+
+.brcmicon-blogs:before {
+	content: "\e607";
+}
+
+.brcmicon-careers:before {
+	content: "\e608";
+}
+
+.brcmicon-communities:before {
+	content: "\e609";
+}
+
+.brcmicon-connectedaudiovideo:before {
+	content: "\e60a";
+}
+
+.brcmicon-corpresponsibility:before {
+	content: "\e60b";
+}
+
+.brcmicon-csr_comm:before {
+	content: "\e60c";
+}
+
+.brcmicon-csr_cust-part:before {
+	content: "\e60d";
+}
+
+.brcmicon-csr_enviro:before {
+	content: "\e60e";
+}
+
+.brcmicon-csr_gov-eth:before {
+	content: "\e60f";
+}
+
+.brcmicon-csr_reporting:before {
+	content: "\e610";
+}
+
+.brcmicon-csr_workplace:before {
+	content: "\e611";
+}
+
+.brcmicon-custlogin:before {
+	content: "\e612";
+}
+
+.brcmicon-document:before {
+	content: "\e613";
+}
+
+.brcmicon-downloads:before {
+	content: "\e614";
+}
+
+.brcmicon-email:before {
+	content: "\e615";
+}
+
+.brcmicon-extlink:before {
+	content: "\e616";
+}
+
+.brcmicon-globe:before {
+	content: "\e617";
+}
+
+.brcmicon-investors:before {
+	content: "\e618";
+}
+
+.brcmicon-iot_audio:before {
+	content: "\e619";
+}
+
+.brcmicon-iot_automotive:before {
+	content: "\e61a";
+}
+
+.brcmicon-iot_beacons_tags:before {
+	content: "\e61b";
+}
+
+.brcmicon-iot_health_fitness:before {
+	content: "\e61c";
+}
+
+.brcmicon-iot_home_automation:before {
+	content: "\e61d";
+}
+
+.brcmicon-iot_industrial:before {
+	content: "\e61e";
+}
+
+.brcmicon-iot_medical:before {
+	content: "\e61f";
+}
+
+.brcmicon-iot_others:before {
+	content: "\e620";
+}
+
+.brcmicon-lightbulb:before {
+	content: "\e621";
+}
+
+.brcmicon-loc_brcm_logo:before {
+	content: "\e622";
+}
+
+.brcmicon-loc_brcmoffices:before {
+	content: "\e623";
+}
+
+.brcmicon-loc_distrib:before {
+	content: "\e624";
+}
+
+.brcmicon-loc_manufacturers:before {
+	content: "\e625";
+}
+
+.brcmicon-loc_salesoffices:before {
+	content: "\e626";
+}
+
+.brcmicon-locmarker:before {
+	content: "\e627";
+}
+
+.brcmicon-mission:before {
+	content: "\e628";
+}
+
+.brcmicon-pdf:before {
+	content: "\e629";
+}
+
+.brcmicon-press:before {
+	content: "\e62a";
+}
+
+.brcmicon-pressreleases:before {
+	content: "\e62b";
+}
+
+.brcmicon-products:before {
+	content: "\e62c";
+}
+
+.brcmicon-productsmenu:before {
+	content: "\e62d";
+}
+
+.brcmicon-quote:before {
+	content: "\e62e";
+}
+
+.brcmicon-search_nobg:before {
+	content: "\e62f";
+}
+
+.brcmicon-search:before {
+	content: "\e630";
+}
+
+.brcmicon-smartdevices:before {
+	content: "\e631";
+}
+
+.brcmicon-socfb:before {
+	content: "\e632";
+}
+
+.brcmicon-socli:before {
+	content: "\e633";
+}
+
+.brcmicon-socpin:before {
+	content: "\e634";
+}
+
+.brcmicon-soctwitter:before {
+	content: "\e635";
+}
+
+.brcmicon-socyt:before {
+	content: "\e636";
+}
+
+.brcmicon-somethingelse:before {
+	content: "\e637";
+}
+
+.brcmicon-support:before {
+	content: "\e638";
+}
+
+.brcmicon-switchingproducts:before {
+	content: "\e639";
+}
+
+.brcmicon-techpages:before {
+	content: "\e63a";
+}
+
+.brcmicon-trending:before {
+	content: "\e63b";
+}
+
+.brcmicon-values:before {
+	content: "\e63c";
+}
+
+.brcmicon-vision:before {
+	content: "\e63d";
+}
+
+.brcmicon-wc_automotive:before {
+	content: "\e63e";
+}
+
+.brcmicon-wc_custloyalty:before {
+	content: "\e63f";
+}
+
+.brcmicon-wc_mobileadvert:before {
+	content: "\e640";
+}
+
+.brcmicon-wc_retail:before {
+	content: "\e641";
+}
+
+.brcmicon-wirelessaccesspoints:before {
+	content: "\e642";
+}
+
