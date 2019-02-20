@@ -3,12 +3,14 @@ import MYResult from '../json/results.json';
 import BootstrapTable from 'react-bootstrap-table-next';
 import Button from './Button';
 import MyModal from './MyModal';
-import '../css/mystyles.css'
+import '../css/mystyles.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Image} from 'react-bootstrap'
 
 class Container extends React.Component{
 
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
     
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
@@ -20,9 +22,12 @@ class Container extends React.Component{
             data: MYResult.Products || [],
             actualData: MYResult.Products || [],
             columns: MYResult.ParametricList_Attributes || [],
+            filterAttributes: MYResult.ParametricList_Filter_Attributes,
             isCompareClicked: false,
             isDisabled: true,
-            selected: []
+            selected: [],
+            activeFilter: false,
+            checkboxInputValue:''
         };
     }
 
@@ -30,8 +35,9 @@ class Container extends React.Component{
         this.setState({ show: false });
     }
     
-    handleShow() {
-        this.setState({ show: true });
+    handleShow(event) {
+        this.setState({ show: true , checkboxInputValue:event.target.value});
+        console.log("val --"+event.target.value)
     }
 
     componentDidMount(){
@@ -58,9 +64,13 @@ class Container extends React.Component{
         });
         //console.log("newColumn --"+newColumn)
         this.setState({columns: newColumn });
+
+        const filterAttrs = this.state.filterAttributes.map(attr => {
+            return Object.values(attr)
+        });
+        this.setState({filterAttributes: filterAttrs });
     }
     
-
     onSelectClick = (row, isSelect) => {
         let modifiedRow;
         if (isSelect) {
@@ -87,6 +97,7 @@ class Container extends React.Component{
             selectedData.includes(row.PartNumber)
         );
         this.setState({ data: filterredData });
+        this.setState({activeFilter: true});
     };
 
     onSelectAll = (isSelect, rows) => {
@@ -104,33 +115,73 @@ class Container extends React.Component{
     };
     
     onClearClick = () => {
-        this.setState(state => ({ data: state.actualData, selected: [], isDisabled: true }));
+        this.setState(state => ({ data: state.actualData, selected: [],
+             isDisabled: true, activeFilter: false }));
     };
+
+    fullList(){
+        var selectRowProp = {
+          mode: "checkbox",
+          clickToSelect: true,
+          selected: this.state.selected,
+          onSelect: this.onSelectClick,
+          onSelectAll: this.onSelectAll
+        };
+        return (
+          <BootstrapTable
+            keyField="PartNumber"
+            selectRow={selectRowProp}
+            data={this.state.data}
+            columns={this.state.columns}
+          />
+        )
+    }
+
+    compareView(){
+        //const filters = [...this.state.filterAttributes]
+        const filteredPartNumbers = this.state.data.map(partnumbers =>partnumbers.PartNumber);
+        const filteredProductLines = this.state.data.map(productlines =>productlines.productline);
+        const filteredProductImages = this.state.data.map(productimages =>productimages.url);
+        // console.log("filterAttributes --"+this.state.filterAttributes )
+        // console.log("filteredPartNumbers --"+filteredPartNumbers )
+        // console.log("filteredProductLines --"+filteredProductLines )
+        return (
+            <div>
+                <table id="compare-results-table" className="table vertical table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Part Number</th>
+                            {filteredPartNumbers.map(k => <td key={k}>{k}</td>)}
+                        </tr>
+                        <tr>
+                            <th>Product Line</th>
+                            {filteredProductLines.map(k => <td key={k}>{k}</td>)}
+                        </tr>
+                        <tr>
+                            <th>Product Image</th>
+                            {filteredProductImages.map(k => <td key={k}><Image src={k} /></td>)}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        )
+    }
 
     render(){
         //console.log(this.state);
-        var selectRowProp = {
-            mode: "checkbox",
-            clickToSelect: true,
-            selected: this.state.selected,
-            onSelect: this.onSelectClick,
-            onSelectAll: this.onSelectAll
-        };
         const allPartNumbers = this.state.data.map(partnumbers =>partnumbers.PartNumber);
         var btnstyle ={marginRight:'10px'}
         return (
-            
             <div>
                 <Button onClick={this.onButtonClick} text="Compare" 
                 isDisabled={this.state.isDisabled} style={btnstyle}/> 
                 <Button onClick={this.onClearClick} text="Clear" />
                 <br />
                 <br />
-                <BootstrapTable keyField="PartNumber" selectRow={selectRowProp}
-                    data={this.state.data} columns={this.state.columns}/> 
+                {!this.state.activeFilter ? this.fullList() : this.compareView()}
                 <br />
-                <Button variant="primary" onClick={this.handleShow} text="Launch demo modal" />
-                <MyModal show={this.state.show} handleClose={this.handleClose} allPartNumbers={allPartNumbers} title="PartNumber"/>
+                <MyModal show={this.state.show} handleClose={this.handleClose}
+                 allPartNumbers={allPartNumbers} title={this.state.checkboxInputValue}/>
             </div>
         );
     }
